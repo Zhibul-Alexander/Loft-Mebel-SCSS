@@ -1,0 +1,578 @@
+$text-color: #414141;
+$text-active-color: #d74444;
+$logo-color: #000000;
+$text-color-gray: #686868;
+$text-href-color: #969696;
+$background-color: #ffffff;
+$background-input-color: #f9f9f9;
+$font-rb: Roboto;
+$border-block: 1px dashed #686868;
+
+%pt-sans-fs-lh-12-14 {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+%pt-sans-fs-lh-12-18 {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+%pt-sans-fs-14 {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+%pt-sans-fs-16 {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+%pt-sans-fs-16-catalog-title {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+%pt-sans-fs-11-catalog-subtitle {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+%pt-sans-fs-28 {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+}
+%pt-sans-fs-42 {
+  font-family: $font-rb;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.header {
+  width: 100%;
+  .shop-info {
+    width: 100%;
+    background: $background-color;
+    height: 126px;
+    &__menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0 10px;
+      margin-bottom: 9px;
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      width: 216px;
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+      cursor: pointer;
+    }
+    &__button-first {
+      flex: 0 1 33.333%;
+    }
+    &__button-second {
+      flex: 0 1 33.333%;
+    }
+    &__button-third {
+      flex: 0 1 33.333%;
+    }
+    &__search {
+      background: $background-input-color;
+      width: 280px;
+      height: 40px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      cursor: pointer;
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+    }
+    &__search-icon {
+      margin: 0px 15px 0px 20px;
+    }
+    &__phone-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+      cursor: pointer;
+    }
+    &__phone-number-icon {
+      margin: 0px 11px 0px 0px;
+    }
+    &__delivery {
+      display: flex;
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+      cursor: pointer;
+    }
+    &__delivery-icon {
+      margin: 0px 10px 0px 0px;
+    }
+    &__user-bar {
+      height: 18px;
+      width: 110px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__user-bar-wishlisf {
+      flex: 0 1 33.333%;
+    }
+    &__user-bar-cart {
+      flex: 0 1 33.333%;
+    }
+    &__user-bar-profile {
+      flex: 0 1 33.333%;
+    }
+  }
+  .nav-panel {
+    width: 100%;
+    background: $background-color;
+    height: 70px;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 10px;
+    }
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1140px;
+      padding: 24px 35px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+    }
+    &__rooms {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %pt-sans-fs-16;
+      color: $text-color;
+      cursor: pointer;
+    }
+    &__title {
+      margin-left: 10px;
+    }
+    &__title-active {
+      color: $text-active-color;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  .link-row {
+    width: 100%;
+    background: $background-color;
+    height: 54px;
+    margin-top: 10px;
+    &__content {
+      width: 315px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0 10px;
+    }
+    &__text {
+      @extend %pt-sans-fs-lh-12-14;
+      color: $text-href-color;
+    }
+  }
+  .card-products {
+    width: 100%;
+    background: $background-color;
+    margin-bottom: 30px;
+    &__content {
+      display: flex;
+      height: 100%;
+      padding: 0 10px;
+      grid-column-gap: 30px;
+    }
+    &__column-first {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 0 1 57.5%;
+    }
+    &__sofa-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 60px 27px 45px 27px;
+    }
+    &__sofa-submain {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__sofa-submain-img {
+      width: 120px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__sofa-submain-img-trimmed {
+      width: 77px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__active-sofa {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+    }
+    &__column-second {
+      height: 100%;
+      flex: 0 1 42.5%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__score {
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    &__title {
+      @extend %pt-sans-fs-28;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      @extend %pt-sans-fs-14;
+      color: $text-color-gray;
+      margin-bottom: 20px;
+    }
+    &__price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 420px;
+      margin-bottom: 20px;
+    }
+    &__price-title {
+      @extend %pt-sans-fs-28;
+      color: $text-color;
+    }
+    &__price-button {
+      width: 143px;
+      height: 40px;
+      cursor: pointer;
+      background: #245462;
+      border: none;
+      @extend %pt-sans-fs-14;
+      color: $background-color;
+    }
+    &__price-text {
+      @extend %pt-sans-fs-lh-12-14;
+      color: $text-color;
+    }
+    &__price-wishlist {
+      cursor: pointer;
+    }
+    &__parameters {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 370px;
+      margin-bottom: 20px;
+    }
+    &__parameters-thing {
+      display: flex;
+      flex-direction: column;
+    }
+    &__parameters-title {
+      @extend %pt-sans-fs-lh-12-14;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    &__parameters-subtitle {
+      display: flex;
+    }
+    &__parameters-block-one {
+      width: 30px;
+      height: 30px;
+      background: #ffc107;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+      margin-right: 12px;
+    }
+    &__parameters-block-two {
+      width: 30px;
+      height: 30px;
+      background: $background-color;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @extend %pt-sans-fs-14;
+      color: $logo-color;
+    }
+    &__parameters-block-three {
+      width: 187px;
+      height: 30px;
+      background: $background-color;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+    }
+    &__parameters-subtitle {
+      display: flex;
+    }
+    &__description {
+      @extend %pt-sans-fs-lh-12-14;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    &__text {
+      @extend %pt-sans-fs-lh-12-18;
+      color: $text-color-gray;
+      max-width: 460px;
+    }
+  }
+  .product-description {
+    width: 100%;
+    background: $background-color;
+    height: 19px;
+    margin-bottom: 10px;
+    &__content {
+      width: 453px;
+      height: 100%;
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__text-active {
+      @extend %pt-sans-fs-16;
+      color: $text-color;
+      border-bottom: 3px solid #245462;
+    }
+    &__text {
+      @extend %pt-sans-fs-16;
+      color: $text-color-gray;
+    }
+  }
+  .parameters {
+    width: 100%;
+    background: $background-color;
+    margin-bottom: 50px;
+    &__content {
+      padding: 0 10px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__content-first {
+      flex: 0 1 55%;
+    }
+    &__content-second {
+      flex: 0 1 42%;
+    }
+    &__content-item {
+      width: 100%;
+      display: flex;
+      margin: 0px 0px 20px 0px;
+    }
+    &__content-text {
+      flex: 0 1 50%;
+      display: flex;
+      align-items: end;
+    }
+    &__item-title {
+      white-space: nowrap;
+      @extend %pt-sans-fs-14;
+      color: $text-color-gray;
+    }
+    &__content-dotted-line {
+      border-bottom: 1px dashed #dfd9d9;
+      height: 1px;
+      width: 100%;
+      margin: 0px 15px 3px 15px;
+    }
+    &__content-value {
+      white-space: nowrap;
+      flex: 0 1 50%;
+      @extend %pt-sans-fs-14;
+      color: $text-color-gray;
+    }
+
+    &__content-text {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    &__content-subtitle {
+      @extend %pt-sans-fs-14;
+      color: $text-color-gray;
+    }
+    &__content-title {
+      @extend %pt-sans-fs-14;
+      color: $text-color-gray;
+    }
+    &__content-block {
+      color: $text-color-gray;
+      width: 226px;
+      height: 0px;
+      border: $border-block;
+      margin: 0px 10px;
+    }
+  }
+  .grid {
+    width: 100%;
+    background: $background-color;
+    &__arrangement {
+      display: grid;
+      grid-template-rows: repeat(5, 270px);
+      grid-template-columns: repeat(4, 270px);
+      grid-column-gap: 20px;
+      grid-row-gap: 70px;
+      margin-bottom: 80px;
+    }
+    &__arrangement-like {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    &__arrangement-images {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    &__arrangement-title {
+      @extend %pt-sans-fs-16-catalog-title;
+      color: $text-color;
+      margin-bottom: 5px;
+    }
+    &__arrangement-subtitle {
+      @extend %pt-sans-fs-11-catalog-subtitle;
+      color: $text-color;
+      margin-bottom: 5px;
+    }
+    &__arrangement-price {
+      @extend %pt-sans-fs-16-catalog-title;
+      color: $text-color;
+    }
+  }
+}
+.footer {
+  width: 100%;
+  .navigation {
+    width: 100%;
+    background: $background-color;
+    &__content {
+      box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.03);
+      padding-top: 30px;
+      display: flex;
+      margin-bottom: 30px;
+    }
+    &__content-column-first {
+      flex: 0 1 50%;
+    }
+    &__content-column-second {
+      flex: 0 1 50%;
+    }
+    &__first-title {
+      @extend %pt-sans-fs-16-catalog-title;
+      color: $logo-color;
+      margin: 0px 0px 10px 0px;
+    }
+    &__first-text {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    &__items-desc {
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+      margin-bottom: 5px;
+    }
+    &__items-column-first {
+      flex: 0 1 30%;
+    }
+    &__items-column-second {
+      flex: 0 1 30%;
+    }
+    &__items-column-third {
+      flex: 0 1 30%;
+    }
+    &__first-excerpt {
+      display: flex;
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+    }
+    &__content-logo {
+      @extend %pt-sans-fs-42;
+      text-align: end;
+      margin-bottom: 32px;
+    }
+    &__address {
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+      text-align: end;
+      margin-bottom: 15px;
+    }
+    &__second-excerpt {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__items-desc-active {
+      margin-right: 30px;
+      color: $text-active-color;
+    }
+    &__items-tel,
+    &__items-mail {
+      @extend %pt-sans-fs-14;
+      color: $text-color;
+    }
+    &__items-tel {
+      margin-right: 30px;
+    }
+  }
+}
